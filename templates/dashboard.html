@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SafeMail Dashboard - Email Fraud Analytics</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Navigation -->
+    <nav class="dashboard-nav">
+      <div class="nav-content">
+        <h2 class="nav-title">SafeMail Dashboard</h2>
+        <div class="nav-links">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/dashboard" class="nav-link active">Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <div class="dashboard-content">
+      <!-- Stats Cards -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📊</div>
+          <div class="stat-info">
+            <h3 id="total-predictions">0</h3>
+            <p>Total Predictions</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🚨</div>
+          <div class="stat-info">
+            <h3 id="fraud-percentage">0%</h3>
+            <p>Fraud Rate</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-info">
+            <h3 id="avg-confidence">0.00</h3>
+            <p>Avg Confidence</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-info">
+            <h3 id="recent-count">0</h3>
+            <p>Recent Activity</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts-grid">
+        <div class="chart-container">
+          <h3>Prediction Distribution</h3>
+          <canvas id="predictionChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <h3>Confidence Levels</h3>
+          <canvas id="confidenceChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Recent Predictions Table -->
+      <div class="recent-predictions">
+        <h3>Recent Predictions</h3>
+        <div class="table-container">
+          <table id="recent-table">
+            <thead>
+              <tr>
+                <th>Email Preview</th>
+                <th>Prediction</th>
+                <th>Confidence</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="recent-tbody">
+              <tr>
+                <td colspan="4" class="no-data">No predictions yet. Start by analyzing some emails!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="dashboard-actions">
+        <a href="/" class="action-btn primary">Analyze New Emails</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let predictionChart, confidenceChart;
+
+    // Initialize charts
+    function initCharts() {
+      // Prediction Distribution Chart
+      const predictionCtx = document.getElementById('predictionChart').getContext('2d');
+      predictionChart = new Chart(predictionCtx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Normal', 'Fraud'],
+          datasets: [{
+            data: [0, 0],
+            backgroundColor: ['#4CAF50', '#F44336'],
+            borderWidth: 2,
+            borderColor: '#fff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }
+      });
+
+      // Confidence Distribution Chart
+      const confidenceCtx = document.getElementById('confidenceChart').getContext('2d');
+      confidenceChart = new Chart(confidenceCtx, {
+        type: 'bar',
+        data: {
+          labels: ['Low', 'Medium', 'High'],
+          datasets: [{
+            label: 'Number of Predictions',
+            data: [0, 0, 0],
+            backgroundColor: ['#FF9800', '#2196F3', '#4CAF50'],
+            borderWidth: 1,
+            borderColor: '#fff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 1
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    }
+
+    // Update dashboard with data
+    function updateDashboard(data) {
+      // Update stats
+      document.getElementById('total-predictions').textContent = data.total_predictions;
+      document.getElementById('fraud-percentage').textContent = data.fraud_percentage + '%';
+      document.getElementById('avg-confidence').textContent = data.avg_confidence;
+      document.getElementById('recent-count').textContent = data.recent_predictions.length;
+
+      // Update prediction chart
+      predictionChart.data.datasets[0].data = [
+        data.prediction_distribution.NORMAL || 0,
+        data.prediction_distribution.FRAUD || 0
+      ];
+      predictionChart.update();
+
+      // Update confidence chart
+      confidenceChart.data.datasets[0].data = [
+        data.confidence_distribution.Low || 0,
+        data.confidence_distribution.Medium || 0,
+        data.confidence_distribution.High || 0
+      ];
+      confidenceChart.update();
+
+      // Update recent predictions table
+      updateRecentTable(data.recent_predictions);
+    }
+
+    // Update recent predictions table
+    function updateRecentTable(predictions) {
+      const tbody = document.getElementById('recent-tbody');
+      
+      if (predictions.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="no-data">No predictions yet. Start by analyzing some emails!</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = predictions.map(pred => {
+        const textPreview = pred.text.length > 50 ? pred.text.substring(0, 50) + '...' : pred.text;
+        const predictionClass = pred.prediction === 'FRAUD' ? 'fraud' : 'normal';
+        const confidenceClass = parseFloat(pred.confidence) >= 0.8 ? 'high' : 
+                               parseFloat(pred.confidence) >= 0.5 ? 'medium' : 'low';
+        
+        return `
+          <tr>
+            <td class="email-preview">${textPreview}</td>
+            <td><span class="prediction-badge ${predictionClass}">${pred.prediction}</span></td>
+            <td><span class="confidence-badge ${confidenceClass}">${pred.confidence}</span></td>
+            <td class="timestamp">Just now</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    // Load dashboard data
+    async function loadDashboardData() {
+      try {
+        const response = await fetch('/api/dashboard-data');
+        const data = await response.json();
+        updateDashboard(data);
+      } catch (error) {
+        console.error('Error loading dashboard data:', error);
+      }
+    }
+
+    // Initialize dashboard
+    document.addEventListener('DOMContentLoaded', function() {
+      initCharts();
+      loadDashboardData();
+      
+      // Auto-refresh every 30 seconds
+      setInterval(loadDashboardData, 30000);
+    });
+  </script>
+</body>
+</html> 

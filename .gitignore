@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.pkl
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data (if you want to exclude test or large files)
+data/*.csv
+!data/custom_emails.csv  # Keep your clean dataset, ignore the rest
+
+# Model files (optional)
+model/*.pkl

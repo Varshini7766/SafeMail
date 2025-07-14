@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SafeMail - Free EmailFraud Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-content">
+        <h2 class="nav-title">SafeMail</h2>
+        <div class="nav-links">
+          <a href="/" class="nav-link active">Home</a>
+          <a href="/dashboard" class="nav-link">Dashboard</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header">
+      <h1>Test your emails and verify them for free</h1>
+      <p class="subtitle">Catch the fraud before it catches you, stay smart stay safe ;)</p>
+    </div>
+    <form method="post" enctype="multipart/form-data" class="main-form">
+      <div class="input-row">
+        <label class="upload-btn">
+          <input type="file" name="file" style="display:none;" onchange="showFileName(this)">
+          <span>Upload your CSV file here!</span>
+        </label>
+        <span class="or">OR</span>
+        <input type="text" name="single_email" placeholder="Upload a single email here!" class="email-input">
+        <button type="submit" class="verify-btn">Verify</button>
+      </div>
+      <div id="file-uploaded-msg" class="file-uploaded-msg"></div>
+    </form>
+    {% if error %}
+      <div class="error">{{ error }}</div>
+    {% endif %}
+    {% if results %}
+      <div class="results">
+        <h2 class="results-title">Detection Results</h2>
+        <div class="results-actions-between">
+          <form method="post" action="/download" style="display:inline;">
+            <input type="hidden" name="download_data" value="{{ results_b64 }}">
+            <button type="submit" class="compact-action-btn">Download Results</button>
+          </form>
+          <a href="/dashboard" class="compact-action-btn analytics-btn">View Analytics</a>
+        </div>
+        <table id="results-table">
+          <tr><th>Email Text</th><th>Prediction</th><th>Confidence</th></tr>
+          {% for row in results %}
+            <tr>
+              <td>{{ row['text'] }}</td>
+              <td>{{ row['prediction'] }}</td>
+              <td>{{ row['confidence'] }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+    {% endif %}
+  </div>
+  <script>
+    function showFileName(input) {
+      if (input.files && input.files[0]) {
+        document.getElementById('file-uploaded-msg').innerHTML = 'CSV file uploaded: ' + input.files[0].name;
+      } else {
+        document.getElementById('file-uploaded-msg').innerHTML = '';
+      }
+    }
+  </script>
+</body>
+</html> 
