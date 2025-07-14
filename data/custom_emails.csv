@@ -1,0 +1,222 @@
+text,class
+"Weekly Team Meeting Reminder. Hi team, just a reminder about our weekly meeting tomorrow at 10 AM in Conference Room B. Please bring your project updates.",0
+"Project Deadline Extension. Hello, due to unforeseen delays, the deadline for the current project has been extended to next Friday. Let me know if you have any concerns.",0
+"Lunch Plan for Friday. Anyone interested in joining for lunch this Friday at the new Italian place downtown? Let me know by Thursday!",0
+"Updated Budget Report. Attached is the updated budget report for Q2. Please review and provide feedback by EOD.",0
+"IT Maintenance Scheduled. Dear all, IT will perform system maintenance this weekend. Expect downtime from 10 PM Saturday to 6 AM Sunday.",0
+"Welcome New Intern. Please join me in welcoming our new intern, John Doe, who will be working with the marketing team starting Monday.",0
+"Holiday Party Invitation. You’re invited to our annual holiday party on Dec 15th at 7 PM. RSVP by Dec 10th.",0
+"Password Policy Update. The company is updating its password policy. All employees must reset their passwords by the end of the month.",0
+"Feedback on Presentation. Hi Sarah, your presentation was great! Just a few minor suggestions—let’s discuss tomorrow.",0
+"Remote Work Approval. Your request for remote work next Tuesday has been approved. Ensure you’re available for the 3 PM call.",0
+"Urgent: Verify Your Account Now. Dear user, your account has been flagged for suspicious activity. Click here to verify your credentials immediately: [malicious-link.com]",1
+"Invoice Payment Overdue. Hi, this is a final notice for unpaid invoice #4567. Pay now via this link to avoid service disruption: [phishing-link.com]",1
+"CEO Request – Confidential. Hi, this is Mark from Finance. The CEO asked me to urgently transfer $10,000 to vendor XYZ. Please process ASAP.",1
+"Your Tax Refund is Pending. You are eligible for a $1200 tax refund. Submit your banking details here: [fake-tax-refund.com]",1
+"Password Reset Required. We detected unauthorized access to your account. Reset your password immediately: [fake-login-page.com]",1
+"Exclusive Investment Opportunity. Limited-time offer! Invest in this high-return scheme with guaranteed 50% profit in 3 months. Reply now!",1
+"HR: Your Salary is On Hold. Due to a payroll error, your salary is delayed. Confirm your bank details here: [fake-hr-portal.com]",1
+"You’ve Won a Prize! Congratulations! You won an iPhone 15. Claim it now by paying a small shipping fee: [scam-website.com]",1
+"Urgent: Update Your Billing Info. Your subscription will be suspended unless you update your credit card details here: [fake-billing-page.com]",1
+"Fake IT Support Alert. Our system detected a virus on your computer. Download this antivirus tool immediately: [malware-download.com]",1
+text,class
+"Subject: Welcome Aboard
+Training session is moved to Thursday at 3 PM.",0
+"Subject: Password Policy Change
+Let's welcome our new intern joining Monday.",0
+"Subject: Project Update
+Office will remain closed on Monday for the holiday.",0
+"Subject: Account Suspension
+You're owed $950. Submit bank details: [fake-tax]",1
+"Subject: Project Update
+Order new whiteboard markers and sticky notes.",0
+"Subject: Fake IT Alert
+You won a new phone! Claim it by paying $5: [link]",1
+"Subject: Quarterly Report
+Office will remain closed on Monday for the holiday.",0
+"Subject: Unpaid Invoice Notice
+Invoice #456 is overdue. Settle now: [malicious-link]",1
+"Subject: Update Billing Info
+Immediate action needed: [scam-alert]",1
+"Subject: Project Update
+Maintenance will start at 8 PM tonight.",0
+"Subject: Office Supplies
+Maintenance will start at 8 PM tonight.",0
+"Subject: Urgent Action Required
+Virus detected! Install patch now: [malware-link]",1
+"Subject: Tax Refund Eligibility
+Your PC is infected. Download antivirus: [bad-link]",1
+"Subject: Exclusive Offer
+Update your card info to continue service: [phishing-link]",1
+"Subject: Urgent Action Required
+Reset your password to secure account: [fraud-link]",1
+"Subject: Fake IT Alert
+You're owed $950. Submit bank details: [fake-tax]",1
+"Subject: Salary Delay
+Update your card info to continue service: [phishing-link]",1
+"Subject: System Alert
+Your account is compromised, verify now: [link]",1
+"Subject: Security Breach
+You won a new phone! Claim it by paying $5: [link]",1
+"Subject: Urgent Verification Needed
+Your account is compromised, verify now: [link]",1
+"Subject: Salary Delay
+Click here to prevent suspension: [link]",1
+"Subject: Weekly Sync
+Training session is moved to Thursday at 3 PM.",0
+"Subject: Tax Refund Eligibility
+CEO needs $5,000 wired to vendor ASAP. Don't delay.",1
+"Subject: Unpaid Invoice Notice
+CEO needs $5,000 wired to vendor ASAP. Don't delay.",1
+"Subject: Tax Refund Eligibility
+Transfer $20,000 to this account urgently. Confidential.",1
+"Subject: Confidential Fund Transfer
+Your account is compromised, verify now: [link]",1
+"Subject: Quarterly Report
+Let's welcome our new intern joining Monday.",0
+"Subject: Holiday Notice
+Quarterly reports are due by EOD Wednesday.",0
+"Subject: Client Feedback
+Maintenance will start at 8 PM tonight.",0
+"Subject: HR Announcements
+Order new whiteboard markers and sticky notes.",0
+"Subject: Prize Claim Now
+Invest now, guaranteed 100% return! Limited offer.",1
+"Subject: Welcome Aboard
+Please reset your password by end of the month.",0
+"Subject: Confidential Fund Transfer
+Your PC is infected. Download antivirus: [bad-link]",1
+"Subject: Exclusive Offer
+Click here to prevent suspension: [link]",1
+"Subject: Client Feedback
+Training session is moved to Thursday at 3 PM.",0
+"Subject: Security Breach
+CEO needs $5,000 wired to vendor ASAP. Don't delay.",1
+"Subject: Project Update
+Maintenance will start at 8 PM tonight.",0
+"Subject: Weekly Sync
+Anyone up for lunch at the cafe today?",0
+"Subject: Training Schedule
+Let's welcome our new intern joining Monday.",0
+"Subject: Urgent Action Required
+Salary delayed. Confirm bank details urgently: [fake-HR]",1
+"Subject: IT Maintenance
+New HR guidelines are attached below.",0
+"Subject: Salary Delay
+CEO needs $5,000 wired to vendor ASAP. Don't delay.",1
+"Subject: Salary Delay
+Click here to prevent suspension: [link]",1
+"Subject: Project Update
+New HR guidelines are attached below.",0
+"Subject: Urgent Verification Needed
+Invest now, guaranteed 100% return! Limited offer.",1
+"Subject: Quarterly Report
+Please reset your password by end of the month.",0
+"Subject: Budget Review
+Budget review is scheduled for Friday.",0
+"Subject: Office Supplies
+Budget review is scheduled for Friday.",0
+"Subject: Salary Delay
+Invest now, guaranteed 100% return! Limited offer.",1
+"Subject: Weekly Sync
+Maintenance will start at 8 PM tonight.",0
+"Subject: Welcome Aboard
+Order new whiteboard markers and sticky notes.",0
+"Subject: Prize Claim Now
+Your account is compromised, verify now: [link]",1
+"Subject: Password Policy Change
+Client appreciated the recent pitch. Well done!",0
+"Subject: Team Lunch
+Maintenance will start at 8 PM tonight.",0
+"Subject: Prize Claim Now
+Salary delayed. Confirm bank details urgently: [fake-HR]",1
+"Subject: Salary Delay
+You're owed $950. Submit bank details: [fake-tax]",1
+"Subject: Training Schedule
+Budget review is scheduled for Friday.",0
+"Subject: Budget Review
+Hi team, let's sync tomorrow at 10 AM.",0
+"Subject: Password Policy Change
+Your request for remote work has been approved.",0
+"Subject: Prize Claim Now
+Salary delayed. Confirm bank details urgently: [fake-HR]",1
+"Subject: System Alert
+Update your card info to continue service: [phishing-link]",1
+"Subject: Tax Refund Eligibility
+Reset your password to secure account: [fraud-link]",1
+"Subject: Office Supplies
+Client appreciated the recent pitch. Well done!",0
+"Subject: Prize Claim Now
+Invest now, guaranteed 100% return! Limited offer.",1
+"Subject: Office Supplies
+Client appreciated the recent pitch. Well done!",0
+"Subject: IT Maintenance
+Quarterly reports are due by EOD Wednesday.",0
+"Subject: Prize Claim Now
+Your PC is infected. Download antivirus: [bad-link]",1
+"Subject: Password Policy Change
+Hi team, let's sync tomorrow at 10 AM.",0
+"Subject: Project Update
+Please reset your password by end of the month.",0
+"Subject: Weekly Sync
+Budget review is scheduled for Friday.",0
+"Subject: Client Feedback
+Maintenance will start at 8 PM tonight.",0
+"Subject: Salary Delay
+Transfer $20,000 to this account urgently. Confidential.",1
+"Subject: Client Feedback
+Your request for remote work has been approved.",0
+"Subject: Urgent Verification Needed
+Your account is compromised, verify now: [link]",1
+"Subject: CEO Urgent Request
+Your account is compromised, verify now: [link]",1
+"Subject: Account Suspension
+You won a new phone! Claim it by paying $5: [link]",1
+"Subject: Password Policy Change
+Please reset your password by end of the month.",0
+"Subject: Holiday Notice
+Client appreciated the recent pitch. Well done!",0
+"Subject: Client Feedback
+Your request for remote work has been approved.",0
+"Subject: Prize Claim Now
+CEO needs $5,000 wired to vendor ASAP. Don't delay.",1
+"Subject: Security Breach
+Click here to prevent suspension: [link]",1
+"Subject: Unpaid Invoice Notice
+Reset your password to secure account: [fraud-link]",1
+"Subject: CEO Urgent Request
+Click here to prevent suspension: [link]",1
+"Subject: Fake IT Alert
+Your PC is infected. Download antivirus: [bad-link]",1
+"Subject: Team Lunch
+Please find attached the updated project plan.",0
+"Subject: Holiday Notice
+Let's welcome our new intern joining Monday.",0
+"Subject: Security Breach
+Click here to prevent suspension: [link]",1
+"Subject: Training Schedule
+Budget review is scheduled for Friday.",0
+"Subject: Project Update
+Quarterly reports are due by EOD Wednesday.",0
+"Subject: System Alert
+Immediate action needed: [scam-alert]",1
+"Subject: IT Maintenance
+Please reset your password by end of the month.",0
+"Subject: Office Supplies
+Your request for remote work has been approved.",0
+"Subject: Remote Work Approved
+Please reset your password by end of the month.",0
+"Subject: Salary Delay
+Reset your password to secure account: [fraud-link]",1
+"Subject: Client Feedback
+Order new whiteboard markers and sticky notes.",0
+"Subject: Client Feedback
+New HR guidelines are attached below.",0
+"Subject: Weekly Sync
+Please find attached the updated project plan.",0
+"Subject: Account Suspension
+Salary delayed. Confirm bank details urgently: [fake-HR]",1
+"Subject: Urgent Action Required
+Salary delayed. Confirm bank details urgently: [fake-HR]",1
+"Subject: Exclusive Offer
+Reset your password to secure account: [fraud-link]",1
