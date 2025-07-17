@@ -5,9 +5,9 @@
 ![Status](https://img.shields.io/badge/Status-Deployed-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-SafeMail is a powerful web-based tool that helps users detect fraudulent emails using a machine learning model trained on real-world corporate communication data, including the infamous **Enron email dataset**.  
+SafeMail is a powerful web-based tool that helps users detect fraudulent emails using a machine learning model trained on real-world corporate communication data, including the infamous Enron email dataset.  
 
-🔗 **Live Site**: [safemail-rneh.onrender.com](https://safemail-rneh.onrender.com)
+🔗Live Site: [safemail-rneh.onrender.com](https://safemail-rneh.onrender.com)
 
 📌 Features
 
@@ -57,7 +57,6 @@ SafeMail/
 | "Please transfer $5000..." | Fraudulent  | 0.91       |
 | "Team meeting at 3PM"      | Normal      | 0.96       |
 
----
 
 🛠 Local Setup
 
@@ -87,10 +86,6 @@ Visit `http://localhost:5000` in your browser.
 [ ] Add PDF and email body extraction support
 [ ] Train with larger and more recent datasets
 
----
-<img width="1914" height="516" alt="Screenshot 2025-07-17 130913" src="https://github.com/user-attach<img width="870" height="838" alt="Screenshot 2025-07-17 130946" src="https://github.com/user-attachments/assets/abc6811e-31bd-4b33-930c-f17b2b84eade" />
-ments/assets/867ea3b0-2a15-4a2e-b52f-84657f79501d" />
-
 👩‍💻 Author
 
 Made with 💙 by [Varshini](https://github.com/Varshini7766)
@@ -100,3 +95,7 @@ Made with 💙 by [Varshini](https://github.com/Varshini7766)
 👉 Try it now: [https://safemail-rneh.onrender.com](https://safemail-rneh.onrender.com)
 
 “Catch the fraud before it catches you. Stay smart, stay safe.” 😉
+
+![Alt text](<img width="1914" height="516" alt="Screenshot 2025-07-17 130913" src="https://github.com/user-attachments/assets/8303f7a1-792c-4fbd-b1b9-35013a1768a6" />
+)
+
